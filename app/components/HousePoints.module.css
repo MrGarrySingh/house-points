@@ -1,0 +1,83 @@
+.houseContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px; /* Increase padding for larger spacing */
+    margin-bottom: 25px; /* Increase margin for more spacing between rows */
+  }
+  
+  .houseName {
+    font-size: 1.6rem; /* Increase font size */
+    font-weight: bold;
+    margin-right: 20px;
+  }
+  
+  .points {
+    font-size: 1.6rem; /* Increase font size */
+    margin-right: 30px;
+    min-width: 120px; /* Ensure larger space for bigger point numbers */
+  }
+  
+  .progressBarContainer {
+    flex-grow: 1;
+    margin: 0 30px; /* Add more margin for better spacing */
+    background-color: #ddd;
+    border-radius: 15px; /* Round the edges more */
+    overflow: hidden;
+    height: 30px; /* Increase the height for larger progress bars */
+    width: 100%;
+    max-width: 600px; /* Increase max width */
+  }
+  
+  .progressBar {
+    height: 100%;
+    transition: width 0.4s ease;
+  }
+  
+  .Gryffindor {
+    background-color: red;
+  }
+  
+  .Slytherin {
+    background-color: green;
+  }
+  
+  .Ravenclaw {
+    background-color: blue;
+  }
+  
+  .Hufflepuff {
+    background-color: yellow;
+  }
+  
+  .buttonsContainer {
+    display: flex;
+    gap: 15px; /* Increase gap between buttons */
+  }
+  
+  .button {
+    padding: 10px 20px; /* Increase button size */
+    font-size: 1.2rem; /* Increase font size for buttons */
+    border: 2px solid #000; /* Add a solid black border */
+    border-radius: 8px;
+    background-color: #fff; /* Make the button white */
+    color: #000; /* Make the text black */
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for background and text color */
+  }
+  
+  .button:hover {
+    background-color: #000; /* Change background to black on hover */
+    color: #fff; /* Change text to white on hover */
+  }
+  
+  .mainContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 30px; /* Increase the gap between rows */
+    max-width: 1400px; /* Make the layout wider */
+    margin: 0 auto;
+    padding: 24px; /* Add more padding */
+  }
+  
