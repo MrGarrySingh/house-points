@@ -3,7 +3,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 
 const harryPotter = localFont({
-  src: "/fonts/HARRYP.ttf",
+  src: "/fonts/HARRYP.TTF",
   variable: "--harry-potter-mono",
 });
 
