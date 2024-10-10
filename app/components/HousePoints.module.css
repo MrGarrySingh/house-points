@@ -3,8 +3,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    padding: 20px; /* Increase padding for larger spacing */
-    margin-bottom: 25px; /* Increase margin for more spacing between rows */
+    padding: 16px; /* Increase padding for larger spacing */
   }
   
   .houseName {
@@ -34,6 +33,12 @@
     height: 100%;
     transition: width 0.4s ease;
   }
+
+  .houseLogo {
+    width: 112px; /* Set the size of the logo */
+    height: 128px;
+    margin-right: 24px; /* Add some margin to separate from other elements */
+  }  
   
   .Gryffindor {
     background-color: red;

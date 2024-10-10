@@ -11,7 +11,7 @@ type HousePointsState = {
   Hufflepuff: number;
 };
 
-const MAX_POINTS = 1000; // Adjusted max points to handle larger ranges
+const MAX_POINTS = 1000;
 
 const HousePoints = () => {
   const initialPoints: HousePointsState = {
@@ -33,12 +33,21 @@ const HousePoints = () => {
     });
   };
 
+  // Function to get the logo based on the house name
+  const getHouseLogo = (house: keyof HousePointsState) => {
+    return `/assets/${house.toLowerCase()}.png`;
+  };
+
   return (
     <div className={styles.mainContainer}>
       {Object.keys(points).map((house) => (
         <div key={house} className={styles.houseContainer}>
-          {/* House Name */}
-          <h3 className={styles.houseName}>{house}</h3>
+          {/* House Logo */}
+          <img
+            src={getHouseLogo(house as keyof HousePointsState)}
+            alt={`${house} logo`}
+            className={styles.houseLogo}
+          />
 
           {/* Current Points */}
           <div className={styles.points}>
@@ -65,7 +74,7 @@ const HousePoints = () => {
           <div className={styles.buttonsContainer}>
             <motion.button
               className={styles.button}
-              whileHover={{ scale: 1.1, backgroundColor: "#aaa" }}
+              whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
               onClick={() =>
                 handlePointsChange(house as keyof HousePointsState, -10)
@@ -75,7 +84,7 @@ const HousePoints = () => {
             </motion.button>
             <motion.button
               className={styles.button}
-              whileHover={{ scale: 1.1, backgroundColor: "#aaa" }}
+              whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
               onClick={() =>
                 handlePointsChange(house as keyof HousePointsState, -5)
@@ -85,7 +94,7 @@ const HousePoints = () => {
             </motion.button>
             <motion.button
               className={styles.button}
-              whileHover={{ scale: 1.1, backgroundColor: "#aaa" }}
+              whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
               onClick={() =>
                 handlePointsChange(house as keyof HousePointsState, 5)
@@ -95,7 +104,7 @@ const HousePoints = () => {
             </motion.button>
             <motion.button
               className={styles.button}
-              whileHover={{ scale: 1.1, backgroundColor: "#aaa" }}
+              whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
               onClick={() =>
                 handlePointsChange(house as keyof HousePointsState, 10)
