@@ -3,8 +3,8 @@ import localFont from "next/font/local";
 import "./globals.css";
 
 const harryPotter = localFont({
-  src: "../public/fonts/HARRYP.TTF",
-  variable: "--harry-potter-mono",
+  src: "./fonts/harryPotter.ttf",
+  display: "swap",
 });
 
 export const metadata: Metadata = {
